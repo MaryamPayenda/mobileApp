@@ -21,7 +21,9 @@ body {
   display: flex;
   justify-content: space-between;
 }
-
+.main-nav li:hover {
+  background-color: lightgray;
+}
 .main-nav li a {
   color: white;
   text-decoration: none;
@@ -92,10 +94,6 @@ img {
   width: 13vw;
   height: 27rem;
 }
-/* .image {
-  display: flex;
-  justify-content: flex-end;
-} */
 .img1 {
   position: absolute;
   top: 0;
@@ -108,74 +106,150 @@ img {
   right: 10vh;
   z-index: auto;
 }
-/* menuicon */
-.menuIcon {
-  background-color: rgb(179, 179, 179);
-  width: 2rem;
-  height: 2.2rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-direction: column;
-  /* position: absolute; */
-  border-radius: 10%;
-  display: none;
-}
-.twoLayer {
-  width: 1.7rem;
-  height: 0.2rem;
-  background-color: black;
-  border-radius: 20%;
-}
-.midLayer {
-  width: 1rem;
-  height: 0.2rem;
-  background-color: black;
-  border-radius: 20%;
-}
-.midLayerdiv {
-  display: flex;
-  align-items: flex-end;
-}
-
-.menuIcon:hover .f-first {
-  transform: rotate(0.12turn);
-  position: absolute;
-  height: 1.2rem;
-  width: 0.2rem;
-  border-radius: 15%;
-  transition: 0.3s;
-}
-.menuIcon:hover .f-second {
-  display: none;
-}
-.menuIcon:hover .f-third {
-  transform: rotate(-0.12turn);
-  background-color: black;
-  height: 1.2rem;
-  width: 0.2rem;
-  border-radius: 15%;
-  transition: 0.3s;
-}
-
+/* mobile */
 @media only screen and (max-width: 600px) {
+  .main-nav {
+    display: none;
+  }
+  .logo img {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 70px;
+  }
+
   .menuIcon {
-    background-color: rgb(179, 179, 179);
+    background-color: transparent;
     width: 2rem;
     height: 2.2rem;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     flex-direction: column;
-    /* position: absolute; */
+    position: absolute;
+    top: 60px;
+    left: 20px;
     border-radius: 10%;
   }
+  .twoLayer {
+    width: 1.7rem;
+    height: 0.12rem;
+    background-color: black;
+    border-radius: 20%;
+  }
+  .midLayer {
+    width: 1rem;
+    height: 0.12rem;
+    background-color: black;
+    border-radius: 20%;
+  }
+  .midLayerdiv {
+    display: flex;
+    align-items: flex-end;
+  }
 
+  .menuIcon:hover .f-first {
+    transform: rotate(0.12turn);
+    position: absolute;
+    height: 1.2rem;
+    width: 0.12rem;
+    border-radius: 15%;
+    transition: 0.3s;
+  }
+  .menuIcon:hover .f-second {
+    display: none;
+  }
+  .menuIcon:hover .f-third {
+    transform: rotate(-0.12turn);
+    background-color: black;
+    height: 1.2rem;
+    width: 0.12rem;
+    border-radius: 15%;
+    transition: 0.3s;
+  }
+  section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 22vh;
+    width: 100vw;
+    text-align: left;
+  }
+  section p {
+    color: white;
+    font-size: 2vw;
+    margin: auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  article {
+    width: 40%;
+  }
+  h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 4vw;
+    text-align: left;
+    margin: 12% 0 5% 0%;
+    color: white;
+  }
+
+  button {
+    text-align: center;
+    border-radius: 2px;
+    padding: 2%;
+    width: 15vw;
+    margin-top: 3rem;
+    border: none;
+    color: white;
+    /* font-weight: bold; */
+    /* font-size: 5px; */
+  }
+  .green-button {
+    background-color: limegreen;
+  }
+  .blue-button {
+    background-color: blue;
+    margin-right: 1.1rem;
+  }
+
+  /* images design */
+  img {
+    width: 15vw;
+    height: 30vh;
+  }
+  .img1 {
+    position: absolute;
+    top: 0;
+    right: 7vh;
+    z-index: auto;
+  }
+  .img2 {
+    position: absolute;
+    top: 10vh;
+    right: 7vh;
+    z-index: auto;
+  }
   .main-nav {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     margin-top: 70px;
     display: none;
+  }
+
+  .main-nav li {
+    display: flex;
+    justify-content: space-between;
+  }
+  .main-nav li:hover {
+    background-color: lightgray;
+  }
+  .main-nav li a {
+    color: black;
+    text-decoration: none;
+    padding: 5px 15px;
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+    font-weight: bold;
   }
 }
